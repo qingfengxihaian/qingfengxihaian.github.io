@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://0.0.0.0:8029/ -->
+<html class=" ">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+                .amap-logo {
+                        display: block !important;
+                        pointer-events: none;
+                }
+        </style>
+        <style type="text/css" class="AMap.style">
+                .vml {
+                        behavior: url(#default#VML);
+                        display: inline-block;
+                        position: absolute
+                }
+
+                .amap-custom {
+                        top: 0;
+                        left: 0;
+                        position: absolute
+                }
+
+                .amap-container img {
+                        max-width: none !important;
+                        max-height: none !important
+                }
+
+                .amap-container {
+                        touch-action: none;
+                        position: relative;
+                        overflow: hidden;
+                        background: #fcf9f2 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0AgMAAAC2uDcZAAAADFBMVEX////////////////1pQ5zAAAABHRSTlMAgP/AWuZC2AAAAVhJREFUeAFiYGAQYGDEQjAB2rcDC4BiGIqiU7abdKlO2QkeIClyPsDHweMKtOPHIJ1Op6/w7Y4fdqfT6VpndzqdrnV2p9PpWmd3Oj3qWndSoKp+2J1Op7vr7E6n07XO7nQ6XevsTqfTtc7udPo4/f787E6n0911dqfT6VpndzqdrnV2p9PpWmd3Ot27Ce8m6HS6u85dR6fTtU7r6HS61mkdnU7XOrvT6XTvJuxOp9PddXan0+laZ3c6na51dDpd67SOTqd7N+HdBJ1Od9e56+h0utZpHZ1O1zq70+l0rbM7nU73bsLudDrdXWd3Ol3rtI5Op2ud1tHpdK3TOjqd7t2EdxN0Ot1dZ3c6na51dqfT6VpndzqdrnV2p9Pp3k3Q6XR3nbuOTqdrndbR6XSt0zo6na51Wken072bsDudTnfX2Z1Op2ud3el0utbZnU7XOq2j0+t0uncTD1gO4zoT5doZAAAAAElFTkSuQmCC);
+                        -ms-touch-action: none
+                }
+
+                .amap-drags,
+                .amap-layers {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        overflow: hidden
+                }
+
+                .amap-layers canvas {
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none
+                }
+
+                .amap-layer img {
+                        pointer-events: none
+                }
+
+                .amap-e,
+                .amap-maps {
+                        width: 100%;
+                        height: 100%
+                }
+
+                .amap-maps,
+                .amap-e,
+                .amap-layers,
+                .amap-tile,
+                .amap-tile-container {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        overflow: hidden
+                }
+
+                .amap-context {
+                        position: absolute;
+                        left: 0;
+                        top: 0
+                }
+
+                .amap-overlays,
+                .amap-markers,
+                .amap-marker {
+                        position: absolute;
+                        left: 0;
+                        top: 0
+                }
+
+                .amap-layers {
+                        z-index: 0
+                }
+
+                .amap-overlays {
+                        z-index: 110;
+                        cursor: default
+                }
+
+                .amap-markers {
+                        z-index: 120
+                }
+
+                .amap-controls {
+                        z-index: 150
+                }
+
+                .amap-copyright {
+                        position: absolute;
+                        display: block !important;
+                        left: 85px;
+                        height: 16px;
+                        bottom: .1px;
+                        padding-bottom: 3px;
+                        font-size: 11px;
+                        font-family: Arial, sans-serif;
+                        z-index: 160
+                }
+
+                .amap-logo {
+                        position: absolute;
+                        bottom: 1.5px;
+                        left: 4px;
+                        z-index: 160;
+                        height: 20px
+                }
+
+                .amap-logo img {
+                        width: 73px !important;
+                        height: 20px !important;
+                        border: 0;
+                        vertical-align: baseline !important
+                }
+
+                .amap-icon {
+                        position: relative;
+                        z-index: 1
+                }
+
+                .amap-icon img {
+                        position: absolute;
+                        z-index: -1
+                }
+
+                .amap-marker-label {
+                        position: absolute;
+                        z-index: 2;
+                        border: 1px solid blue;
+                        background-color: white;
+                        white-space: nowrap;
+                        cursor: default;
+                        padding: 3px;
+                        font-size: 12px;
+                        line-height: 14px
+                }
+
+                .amap-info {
+                        position: absolute;
+                        left: 0;
+                        z-index: 140;
+                        width: 320px
+                }
+
+                .amap-menu {
+                        position: absolute;
+                        z-index: 140;
+                        _width: 100px
+                }
+
+                .amap-info-close {
+                        position: absolute;
+                        right: 5px;
+                        _right: 12px;
+                        +right: 11px;
+                        top: 5px;
+                        _top: 2px;
+                        +top: 2px;
+                        color: #c3c3c3;
+                        text-decoration: none;
+                        font: bold 16px/14px Tahoma, Verdana, sans-serif;
+                        width: 14px;
+                        height: 14px
+                }
+
+                .amap-info-outer,
+                .amap-menu-outer {
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                        background: none repeat scroll 0 0 white;
+                        border-radius: 2px;
+                        padding: 1px;
+                        text-align: left
+                }
+
+                .amap-menu-outer:hover {
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+                }
+
+                .amap-info-contentContainer:hover .amap-info-outer {
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+                }
+
+                .amap-info-content {
+                        position: relative;
+                        background: #fff;
+                        padding: 10px 18px 10px 10px;
+                        line-height: 1.4;
+                        overflow: auto
+                }
+
+                .amap-marker-content {
+                        position: relative
+                }
+
+                .amap-info {
+                        _width: 320px
+                }
+
+                .amap-menu {
+                        _width: 100px
+                }
+
+                .amap-info-sharp-old {
+                        overflow: hidden;
+                        position: absolute;
+                        background-image: url(http://webapi.amap.com/images/arrows.png)
+                }
+
+                .bottom-center .amap-info-sharp-old {
+                        height: 12px;
+                        margin: 0 auto;
+                        width: 20px;
+                        background-position: center 12px;
+                        top: 100%;
+                        margin-top: -9px;
+                        left: 50%;
+                        margin-left: -10px
+                }
+
+                .bottom-left .amap-info-sharp-old {
+                        height: 12px;
+                        width: 13px;
+                        background-position: -16px -46px;
+                        top: 100%;
+                        margin-top: -9px
+                }
+
+                .bottom-right .amap-info-sharp-old {
+                        height: 12px;
+                        width: 13px;
+                        top: -1px;
+                        background-position: -56px -46px;
+                        left: 100%;
+                        margin-left: -13px;
+                        top: 100%;
+                        margin-top: -9px
+                }
+
+                .middle-left .amap-info-sharp-old {
+                        height: 20px;
+                        width: 12px;
+                        background-position: left;
+                        top: 50%;
+                        margin-top: -10px;
+                        margin-left: -11px
+                }
+
+                .center .amap-info-sharp-old {
+                        display: none
+                }
+
+                .middle-right .amap-info-sharp-old {
+                        height: 20px;
+                        margin-right: 0;
+                        width: 12px;
+                        background-position: right;
+                        left: 100%;
+                        margin-left: -9px;
+                        top: 50%;
+                        margin-top: -10px
+                }
+
+                .top-center .amap-info-sharp-old {
+                        height: 12px;
+                        margin: 0 auto;
+                        width: 20px;
+                        background-position: top;
+                        top: 0;
+                        margin-top: -3px;
+                        left: 50%;
+                        margin-left: -10px
+                }
+
+                .top-left .amap-info-sharp-old {
+                        height: 12px;
+                        width: 13px;
+                        background-position: -16px -3px;
+                        top: 0;
+                        margin-top: -3px
+                }
+
+                .top-right .amap-info-sharp-old {
+                        height: 12px;
+                        width: 13px;
+                        background-position: -56px -3px;
+                        left: 100%;
+                        margin-left: -13px;
+                        top: 0;
+                        margin-top: -3px
+                }
+
+                .amap-info-sharp {
+                        position: absolute
+                }
+
+                .bottom-center .amap-info-sharp {
+                        bottom: 0;
+                        left: 50%;
+                        margin-left: -8px;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid #fff
+                }
+
+                .bottom-center .amap-info-sharp:after {
+                        position: absolute;
+                        content: "";
+                        margin-left: -8px;
+                        margin-top: -7px;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid rgba(0, 0, 0, 0.3);
+                        filter: blur(2px);
+                        z-index: -1
+                }
+
+                .amap-info-contentContainer:hover.bottom-center .amap-info-sharp:after {
+                        border-top: 8px solid rgba(0, 0, 0, 0.5)
+                }
+
+                .bottom-left .amap-info-sharp {
+                        border-color: transparent #fff;
+                        border-width: 0 0 10px 10px;
+                        border-style: solid
+                }
+
+                .bottom-left .amap-info-sharp:after {
+                        position: absolute;
+                        content: "";
+                        margin-left: -10px;
+                        border-color: transparent rgba(0, 0, 0, 0.3);
+                        border-width: 0 0 10px 10px;
+                        border-style: solid;
+                        filter: blur(1px);
+                        z-index: -1
+                }
+
+                .amap-info-contentContainer:hover.bottom-left .amap-info-sharp:after {
+                        border-color: transparent rgba(0, 0, 0, 0.5)
+                }
+
+                .bottom-left .amap-info-content {
+                        border-radius: 2px 2px 2px 0
+                }
+
+                .bottom-right .amap-info-sharp {
+                        right: 0;
+                        border-top: 10px solid #fff;
+                        border-left: 10px solid transparent
+                }
+
+                .bottom-right .amap-info-sharp:after {
+                        position: absolute;
+                        margin-top: -9px;
+                        margin-left: -10px;
+                        content: "";
+                        border-top: 10px solid rgba(0, 0, 0, 0.3);
+                        border-left: 10px solid transparent;
+                        filter: blur(1px);
+                        z-index: -1
+                }
+
+                .amap-info-contentContainer:hover.bottom-right .amap-info-sharp:after {
+                        border-top: 10px solid rgba(0, 0, 0, 0.5)
+                }
+
+                .bottom-right .amap-info-content {
+                        border-radius: 2px 2px 0 2px
+                }
+
+                .top-center .amap-info-sharp {
+                        top: 0;
+                        left: 50%;
+                        margin-left: -8px;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-bottom: 8px solid #fff
+                }
+
+                .top-center .amap-info-sharp:after {
+                        position: absolute;
+                        content: "";
+                        margin-top: 0;
+                        margin-left: -8px;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-bottom: 8px solid rgba(0, 0, 0, 0.3);
+                        filter: blur(1px);
+                        z-index: -1
+                }
+
+                .top-left .amap-info-sharp {
+                        left: 0;
+                        top: 0;
+                        border-bottom: 10px solid #fff;
+                        border-right: 10px solid transparent
+                }
+
+                .top-left .amap-info-sharp:after {
+                        position: absolute;
+                        content: "";
+                        margin-top: 0;
+                        margin-left: 0;
+                        border-bottom: 10px solid rgba(0, 0, 0, 0.3);
+                        border-right: 10px solid transparent;
+                        filter: blur(1px);
+                        z-index: -1
+                }
+
+                .top-right .amap-info-sharp {
+                        right: 0;
+                        top: 0;
+                        border-bottom: 10px solid #fff;
+                        border-left: 10px solid transparent
+                }
+
+                .top-right .amap-info-sharp:after {
+                        position: absolute;
+                        content: "";
+                        margin-top: 0;
+                        margin-left: -10px;
+                        border-bottom: 10px solid rgba(0, 0, 0, 0.3);
+                        border-left: 10px solid transparent;
+                        filter: blur(1px);
+                        z-index: -1
+                }
+
+                .middle-right .amap-info-sharp {
+                        right: 0;
+                        top: 50%;
+                        margin-top: -8px;
+                        border-top: 8px solid transparent;
+                        border-left: 8px solid #fff;
+                        border-bottom: 8px solid transparent
+                }
+
+                .middle-right .amap-info-sharp:after {
+                        position: absolute;
+                        content: "";
+                        margin-top: -8px;
+                        margin-left: -8px;
+                        border-top: 8px solid transparent;
+                        border-left: 8px solid rgba(0, 0, 0, 0.3);
+                        border-bottom: 8px solid transparent;
+                        filter: blur(1px);
+                        z-index: -1
+                }
+
+                .amap-info-contentContainer:hover.middle-right .amap-info-sharp:after {
+                        border-left: 8px solid rgba(0, 0, 0, 0.5)
+                }
+
+                .middle-left .amap-info-sharp {
+                        left: 0;
+                        top: 50%;
+                        margin-top: -8px;
+                        border-top: 8px solid transparent;
+                        border-right: 8px solid #fff;
+                        border-bottom: 8px solid transparent
+                }
+
+                .middle-left .amap-info-sharp:after {
+                        position: absolute;
+                        content: "";
+                        margin-top: -8px;
+                        margin-left: 0;
+                        border-top: 8px solid transparent;
+                        border-right: 8px solid rgba(0, 0, 0, 0.3);
+                        border-bottom: 8px solid transparent;
+                        filter: blur(1px);
+                        z-index: -1
+                }
+
+                .amap-info-contentContainer:hover.middle-left .amap-info-sharp:after {
+                        border-right: 8px solid rgba(0, 0, 0, 0.5)
+                }
+
+                .amap-info-contentContainer.top-left,
+                .amap-info-contentContainer.top-center,
+                .amap-info-contentContainer.top-right {
+                        padding-top: 8px
+                }
+
+                .amap-info-contentContainer.bottom-left,
+                .amap-info-contentContainer.bottom-center,
+                .amap-info-contentContainer.bottom-right {
+                        padding-bottom: 8px
+                }
+
+                .amap-info-contentContainer.middle-right {
+                        padding-right: 8px
+                }
+
+                .amap-info-contentContainer.middle-left {
+                        padding-left: 8px
+                }
+
+                .amap-menu-outer {
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none
+                }
+
+                ul.amap-menu-outer li {
+                        cursor: pointer;
+                        height: 35px;
+                        line-height: 35px;
+                        word-break: break-all;
+                        padding: 0 10px;
+                        font-size: 12px;
+                        white-space: nowrap
+                }
+
+                ul.amap-menu-outer li a {
+                        text-decoration: none;
+                        font-size: 13px;
+                        margin: 0 5px;
+                        color: #000;
+                        padding: 5px 5px
+                }
+
+                ul.amap-menu-outer li:hover {
+                        background-color: #f3f3ee
+                }
+
+                .amap-overlay-text-container {
+                        display: block;
+                        width: auto;
+                        word-break: keep-all;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        background: #fff;
+                        padding: 2px 3px;
+                        border: 1px solid #ccc;
+                        border-radius: 3px
+                }
+
+                .amap-overlay-text-container.amap-overlay-text-empty {
+                        display: none
+                }
+
+                .amap-info-content-ie8 {
+                        border: 1px solid #9c9c9c
+                }
+        </style>
+        <meta name="viewport"
+                content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>聊心聊-温暖交友社区</title>
+        <script type="text/javascript" src="./assets/maps"></script>
+        <style type="text/css">
+                .amap-container {
+                        cursor: url(https://webapi.amap.com/theme/v1.3/openhand.cur), default;
+                }
+
+                .amap-drag {
+                        cursor: url(https://webapi.amap.com/theme/v1.3/closedhand.cur), default;
+                }
+        </style>
+        <link rel="shortcut icon" href="http://0.0.0.0:8029/favicon.ico">
+        <style type="text/css">
+                /* Make clicks pass-through */
+                #nprogress {
+                        pointer-events: none;
+                }
+
+                #nprogress .bar {
+                        background: #29d;
+                        position: fixed;
+                        z-index: 1031;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                }
+
+                /* Fancy blur effect */
+                #nprogress .peg {
+                        display: block;
+                        position: absolute;
+                        right: 0px;
+                        width: 100px;
+                        height: 100%;
+                        -webkit-box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+                        box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+                        opacity: 1.0;
+                        -webkit-transform: rotate(3deg) translate(0px, -4px);
+                        transform: rotate(3deg) translate(0px, -4px);
+                }
+
+                /* Remove these to get rid of the spinner */
+                #nprogress .spinner {
+                        display: block;
+                        position: fixed;
+                        z-index: 1031;
+                        top: 15px;
+                        right: 15px;
+                }
+
+                #nprogress .spinner-icon {
+                        width: 18px;
+                        height: 18px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        border: solid 2px transparent;
+                        border-top-color: #29d;
+                        border-left-color: #29d;
+                        border-radius: 50%;
+                        -webkit-animation: nprogress-spinner 400ms linear infinite;
+                        animation: nprogress-spinner 400ms linear infinite;
+                }
+
+                .nprogress-custom-parent {
+                        overflow: hidden;
+                        position: relative;
+                }
+
+                .nprogress-custom-parent #nprogress .spinner,
+                .nprogress-custom-parent #nprogress .bar {
+                        position: absolute;
+                }
+
+                @-webkit-keyframes nprogress-spinner {
+                        0% {
+                                -webkit-transform: rotate(0deg);
+                        }
+
+                        100% {
+                                -webkit-transform: rotate(360deg);
+                        }
+                }
+
+                @keyframes nprogress-spinner {
+                        0% {
+                                -webkit-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                        }
+
+                        100% {
+                                -webkit-transform: rotate(360deg);
+                                transform: rotate(360deg);
+                        }
+                }
+        </style>
+        <style type="text/css">
+                * {
+                        font-family: PingFangSC-Regular, Helvetica, HelveticaNeue, Arial, Verdana, Sans-serif;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        margin: 0;
+                        padding: 0;
+                }
+
+                html {
+                        -webkit-text-size-adjust: 100%;
+                        -moz-text-size-adjust: 100%;
+                        -ms-text-size-adjust: 100%;
+                        text-size-adjust: 100%;
+                        -ms-touch-action: manipulation;
+                        touch-action: manipulation;
+                        color: rgba(255, 255, 255, 0.85);
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        font-size: 12px;
+                        color: #141922;
+                }
+
+                html * {
+                        -webkit-text-size-adjust: none;
+                        -moz-text-size-adjust: none;
+                        -ms-text-size-adjust: none;
+                        text-size-adjust: none;
+                }
+
+                html,
+                body {
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 12px;
+                        -webkit-overflow-scrolling: touch;
+                }
+
+                div {
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                }
+
+                button {
+                        border: none;
+                        outline: none;
+                }
+
+                ::-webkit-scrollbar {
+                        width: 0px;
+                        -webkit-appearance: none;
+                        display: none;
+                        height: 0px;
+                }
+        </style>
+        <style type="text/css">
+                .app {
+                        width: 100%;
+                        height: 100%;
+                }
+        </style>
+        <script charset="utf-8" src="./assets/0.bc2c13b8.js"></script>
+        <style type="text/css">
+                .download-btn {
+                        cursor: pointer;
+                        width: 112px;
+                        height: 48px;
+                        background: #0f0c13;
+                        border-radius: 8px;
+                        font-size: 18px;
+                        font-family: PingFangSC-Semibold, PingFang SC;
+                        font-weight: 600;
+                        color: #fff;
+                }
+        </style>
+        <style type="text/css">
+                .nuan-chat-header {
+                        width: 100%;
+                        height: 80px;
+                        position: fixed;
+                        left: 0;
+                        top: 0;
+                        background: rgba(0, 0, 0, 0.5);
+                        z-index: 999;
+                }
+
+                .nuan-chat-header.isFixed {
+                        -webkit-box-shadow: 0px 2px 8px 0px rgba(20, 25, 34, 0.4);
+                        box-shadow: 0px 2px 8px 0px rgba(20, 25, 34, 0.4);
+                }
+
+                .nuan-chat-header .main-container {
+                        width: 100%;
+                        height: 80px;
+                        margin: 0 auto;
+                        padding: 0 130px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: justify;
+                        -webkit-justify-content: space-between;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                }
+
+                .nuan-chat-header .main-container .header-wrapper {
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                }
+
+                .nuan-chat-header .main-container .header-wrapper .logo {
+                        width: 56px;
+                        height: 56px;
+                }
+
+                .nuan-chat-header .main-container .header-wrapper h3 {
+                        padding-left: 16px;
+                        font-size: 24px;
+                        font-family: PingFangSC-Medium, PingFang SC;
+                        font-weight: 500;
+                        color: #333333;
+                        line-height: 28px;
+                }
+
+                .nuan-chat-header .main-container .header-opreate p {
+                        cursor: pointer;
+                        font-size: 18px;
+                        font-family: PingFangSC-Semibold, PingFang SC;
+                        font-weight: 600;
+                        color: #333333;
+                        line-height: 24px;
+                        padding-right: 16px;
+                }
+
+                .nuan-chat-header .main-container .header-opreate button {
+                        width: 96px;
+                        height: 40px;
+                        background: #0f0c13;
+                        border-radius: 8px;
+                        font-size: 18px;
+                        font-family: PingFangSC-Semibold, PingFang SC;
+                        font-weight: 600;
+                        color: #ffffff;
+                }
+        </style>
+        <style type="text/css">
+                .footer-container {
+                        width: 100%;
+                        padding: 80px 0 60px;
+                }
+
+                .footer-container .concat-ways {
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        margin-bottom: 60px;
+                        padding: 0 130px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                }
+
+                .footer-container .concat-ways .footer-item {
+                        width: 100%;
+                        height: 240px;
+                        background: #f5f5f5;
+                        border-radius: 15px;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        margin: 0 10px;
+                        position: relative;
+                }
+
+                .footer-container .concat-ways .footer-item .email-container {
+                        width: 353px;
+                        height: 60px;
+                        border-radius: 9px;
+                        background-color: #fff;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        font-weight: 400;
+                        font-size: 16px;
+                }
+
+                .footer-container .concat-ways .footer-item .email-container .email-icon {
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 16px;
+                }
+
+                .footer-container .concat-ways .footer-item h5 {
+                        font-size: 16px;
+                        font-family: PingFangSC-Medium, PingFang SC;
+                        font-weight: 500;
+                        color: #333333;
+                        line-height: 20px;
+                        margin-bottom: 10px;
+                }
+
+                .footer-container .concat-ways .footer-item .text-center {
+                        text-align: center;
+                }
+
+                .footer-container .concat-ways .footer-item .left-wrapper .ways-item {
+                        width: 300px;
+                        height: 60px;
+                        background: #ffffff;
+                        border-radius: 9px;
+                        margin-bottom: 12px;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        padding-left: 20px;
+                }
+
+                .footer-container .concat-ways .footer-item .left-wrapper .ways-item img {
+                        width: 40px;
+                        height: 40px;
+                }
+
+                .footer-container .concat-ways .footer-item .left-wrapper .ways-item p {
+                        padding-left: 12px;
+                        font-size: 16px;
+                        font-family: PingFangSC-Regular, PingFang SC;
+                        font-weight: 400;
+                        color: #333333;
+                        line-height: 20px;
+                }
+
+                .footer-container .concat-ways .footer-item .right-wrapper .code-icon {
+                        width: 132px;
+                        height: 132px;
+                }
+
+                .footer-container .bussiness-info {
+                        text-align: center;
+                        font-size: 12px;
+                        font-family: PingFangSC-Regular, PingFang SC;
+                        font-weight: 400;
+                        color: #999999;
+                        line-height: 20px;
+                }
+
+                .footer-container .bussiness-info .agreement-item {
+                        margin-bottom: 4px;
+                }
+
+                .footer-container .bussiness-info .agreement-item a {
+                        text-decoration: none;
+                        color: #999999;
+                        padding: 0 5px;
+                        position: relative;
+                        cursor: pointer;
+                }
+
+                .footer-container .bussiness-info .agreement-item a:hover {
+                        color: #666;
+                }
+
+                .footer-container .bussiness-info .agreement-item a::before {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        -webkit-transform: translate(4px, -50%);
+                        transform: translate(4px, -50%);
+                        width: 1px;
+                        height: 10px;
+                        background-color: #999999;
+                        content: "";
+                }
+
+                .footer-container .bussiness-info .agreement-item .no-line::before {
+                        content: none;
+                }
+
+                .footer-container .bussiness-info .agreement-item .plice-icon {
+                        width: 16px;
+                        height: 16px;
+                        vertical-align: text-bottom;
+                        margin-left: 4px;
+                }
+        </style>
+        <style type="text/css">
+                #nuan-chat-home {
+                        background-color: #fff;
+                }
+
+                #nuan-chat-home .wrapper-1 {
+                        width: 100%;
+                        margin: 0 auto;
+                        background-color: #fff;
+                        position: relative;
+                }
+
+                #nuan-chat-home .wrapper-1 .banner {
+                        width: 100%;
+                }
+
+                #nuan-chat-home .wrapper-1 .download-btn {
+                        position: absolute;
+                        left: 0;
+                }
+
+                #nuan-chat-home .wrapper-1 .nuan-chat-title {
+                        font-size: 36px;
+                        font-family: PingFangSC-Medium, PingFang SC;
+                        font-weight: 500;
+                        color: #333333;
+                        line-height: 40px;
+                        margin-bottom: 20px;
+                }
+
+                #nuan-chat-home .wrapper {
+                        background: #f5f5f5;
+                }
+
+                #nuan-chat-home .wrapper-2 {
+                        text-align: center;
+                        padding: 115px 158px 86px 158px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: justify;
+                        -webkit-justify-content: space-between;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        font-weight: 400;
+                        font-size: 28px;
+                        line-height: 186%;
+                        /* or 52px */
+                        color: #565758;
+                        text-align: left;
+                }
+
+                #nuan-chat-home .wrapper-2 .phone-img {
+                        width: 488px;
+                        height: 595px;
+                }
+
+                #nuan-chat-home .wrapper-2 .special {
+                        font-weight: 600;
+                        margin-bottom: 60px;
+                }
+
+                #nuan-chat-home .wrapper-3 {
+                        width: 100%;
+                        background-clip: content-box;
+                        background: #f5f5f5;
+                }
+
+                #nuan-chat-home .wrapper-3 img {
+                        width: 1440px;
+                        display: block;
+                        margin: 0 auto;
+                }
+
+                #nuan-chat-home .wrapper-4 {
+                        height: 64px;
+                        background: #f5f5f5;
+                }
+        </style>
+</head>
+
+<body>
+        <div class="app">
+                <div id="nuan-chat-home">
+                        <div class="wrapper-1"><img
+                                        src="./assets/banner.6878514.png" class="banner"></div>
+                        <div class="wrapper-2"><img src="./assets/phone-img.29bf85d.png" class="phone-img">
+                                <div>
+                                        在这世间，爱情是最美的风景。<br>
+                                        爱是一种感觉，让人心醉神迷。<br>
+                                        爱情是如此美好，让人无法抗拒。<br><br>
+                                        <div class="special">
+                                                来暖心聊天，让爱陪伴每一天
+                                        </div><br> <button class="download-btn">立即下载</button>
+                                </div>
+                        </div>
+                        <div class="footer-container">
+                                <div class="concat-ways">
+                                        <div class="footer-item">
+                                                <div class="email-container"><img
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMpSURBVHgB7ZtNctowFMcfHwdIV9nSE5QmOQCcoL1ByAmSnCDkBElOkGbZXXsC2AMzdNddWTFdcgA++n+JNdPpUKwnAZY9/9+Mx07GRtaPJz1ZFiKEEEIIIYQQQgghhBBCyDGoSSDtdrvVaDRuNpvNp1qt1pJyMsM2XK1W99PpdCYBBAmEvDbkDXB4ItVgUa/Xu6PRaCpGzAKzyFN5LakWC0TiR2sk1sUI5PWlevKUE0ThjRgxC0Sf90EqCvrySzFiFohCfkh1MfeBZoGTyaQHiV1E4kyqw1DrhLp1xUjwMEY5OzvrYXdX1mGMBgHuvQ9xLxJIlEAHRGrne10WkRCnw5an5XL5iKy7kAj2IlBxA2scXkui7FOcY28CHZnIPg7NGe3AfIl54vgf5iRyfn6+U4zeoCYa3Ox7/DmU4nEJ4ipPHupmbj3mCEQhG3l7hvTqfItKNGiuUzTX2/F4PMw7F3X6jN0DthbqZHISKtChWewGN/k977pjicz6uXvc02PeuRcXFx2cf4fDjvvfsQU6dEbjyqd/wU331+v15b5FWhLENnGOogQ6vDrqAySaJ5TbzxOXlfssW8Q5ihboOJZIr8hHOTpRoN1H7mRBKgJfQTPR5vriUcE2KviMCrbFD82s93kJIhN3nYnzmrtMSmDGTPaUsbNHr1t81rddnxMizpGiQMdMAkW6BIGI6/tci+s0QbQkgJQFOmbiIVL7x2az2dNj38yK3QNk+3YDWymDwLeCazWde/Ma6O5i15AkBKvAphREFikDfCFBz6hOHLaOFIj5WfgA9DCU+QWRz9ps807Wc1Q6xOmLrY4UTGFNeAdbIzIms1qwNuEUIvBfNCIHyKbar72K02ONUp09lsTeRacYgX/jMu/RpJUmiXiS/MqHFJtwqaDASCgwEgqMhAIjocBIKDASCoyEAiOhwEgoMJIQgXtZ1ZQiIYtGQ9ZIBy9GTB1Mlw3FiFkg3vPqmpPKRaG++dOJXDFiFqgzxfqjFKmQRJWHwOiGrB1sSADz+fz36enpV4h8h8JPEPql/MVS9qL+BfJ0echPIYQQQgghhBBCCCGEEEKS5Q/g86pdRmS/MAAAAABJRU5ErkJggg=="
+                                                                class="email-icon">
+                                                        <div>
+                                                                Mail：wennuan_liaotian@gmail.com
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <script type="text/javascript" src="./assets/app.bc2c13b8.js"></script>
+
+
+</body><!-- <script src="//polyfill.io/v3/polyfill.min.js"></script> -->
+
+</html>
